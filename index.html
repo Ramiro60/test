@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Slider</title>
+</head>
+
+<body>
+    <h1><a href="https://code.visualstudio.com/docs" target="_blank">Documentación de Visual Studio Code</a></h1>
+    <img name="slider" />
+
+    <script>
+        window.addEventListener('load', function() {
+            console.log('El contenido ha cargado');
+            var imagenes = ['img/imagen1.jpg', 'img/imagen2.jpg', 'img/imagen3.jpg', 'img/imagen4.jpg'];
+            //document.slider.src = 'img/imagen4.jpg';
+            var ind = 0;
+            var tiempo = 1000;
+
+            function cambiarImg() {
+                document.slider.src = imagenes[ind];
+                if (ind < 3)
+                    ind++;
+                else
+                    ind = 0;
+            }
+            setInterval(cambiarImg, tiempo);
+        });
+    </script>
+</body>
+
+</html>
